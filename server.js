@@ -4,6 +4,7 @@ const server = require('http').createServer()
 const io = require("socket.io")(server,{cors:{origin:"*"}})
 const parser = require('body-parser')
 const hostname = "0.0.0.0"
+const port = process.env.PORT || 80
 app.use(parser.json())
 
 
@@ -66,5 +67,5 @@ app.post("/",(req,res)=>{
     });
 
 })
-app.listen(80)
-server.listen(5555,hostname,()=>console.log("started server on 4000"))
+app.listen(port, ()=>{console.log("RUNNING WEBSERVER ON  PORT "+port )})
+server.listen(5555,hostname,()=>console.log("started Web socket on 5555"))
