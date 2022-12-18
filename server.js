@@ -46,7 +46,9 @@ io.on("connection",(socket)=>{
     })
 })
 
-
+app.get('/test',(req,res)=>{
+    res.send("testing by JBXV")
+})
 
 app.post("/",(req,res)=>{
     let client = req.body.client;
