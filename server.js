@@ -67,5 +67,5 @@ app.post("/",(req,res)=>{
     });
 
 })
-app.listen(port, ()=>{console.log("RUNNING WEBSERVER ON  PORT "+port )})
-server.listen(5555,hostname,()=>console.log("started Web socket on 5555"))
+app.listen(port,hostname, ()=>{console.log("RUNNING WEBSERVER ON  PORT "+port )})
+server.listen(8777,hostname,()=>console.log("started Web socket on 8777"))
