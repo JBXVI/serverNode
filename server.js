@@ -1,6 +1,6 @@
 const express =require('express')
 const app = express()
-const server = require('http').createServer()
+const server = require('http').createServer(app)
 const io = require("socket.io")(server,{cors:{origin:"*"}})
 const parser = require('body-parser')
 
@@ -67,5 +67,5 @@ app.post("/",(req,res)=>{
     });
 
 })
-app.listen(port, ()=>{console.log("RUNNING WEBSERVER ON  PORT "+port )})
-server.listen(8777,()=>console.log("started Web socket on 8777"))
+//app.listen(port, ()=>{console.log("RUNNING WEBSERVER ON  PORT "+port )})
+server.listen(80,()=>console.log("started Web socket on 80"))
