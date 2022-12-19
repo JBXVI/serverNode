@@ -51,6 +51,9 @@ app.get('/test',(req,res)=>{
     res.send("testing by JBXV")
 })
 
+app.get('/',(req,res)=>{
+    res.send("THIS IS A TEST SERVER BY JBXV")
+    })
 app.post("/",(req,res)=>{
     let client = req.body.client;
     let  message  = req.body.message;
